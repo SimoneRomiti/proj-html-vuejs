@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -37,5 +41,33 @@ header .header-top nav ul {
   display: flex;
 }
 header .header-top nav ul li {
-  margin: 0 10px;
+  margin: 0 20px;
+}
+header .header-top nav ul li a {
+  color: #fefefe;
+}
+header .header-top nav ul li a:hover {
+  color: #d5625f;
+}
+header .header-bottom {
+  text-align: center;
+  color: #fefefe;
+  font-size: 55px;
+}
+header .header-bottom p {
+  font-size: 25px;
+  margin: 20px 0;
+}
+header .header-bottom a {
+  display: inline-block;
+  border: 2px solid #6b6b6b;
+  color: #6b6b6b;
+  background: transparent;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+header .header-bottom a:hover {
+  border: 2px solid #fefefe;
+  color: #fefefe;
 }
