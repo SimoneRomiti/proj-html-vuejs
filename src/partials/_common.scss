@@ -25,3 +25,8 @@ li{
     transform: translateY(0px);
   }
 }
+
+main, footer{
+  position: relative;
+  z-index: 2;
+}

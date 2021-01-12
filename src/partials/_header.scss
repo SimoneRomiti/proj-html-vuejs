@@ -3,6 +3,7 @@ header{
   background-image: url('../img/home-banner.jpg');
   background-position: center;
   @include backgroundSizeCover;
+  background-attachment: fixed;
   .header-top{
     display: flex;
     justify-content: space-between;
@@ -38,6 +39,10 @@ header{
     font-size: 55px;
     animation-name: effect;
     animation-duration: 1s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
     p{
       font-size: 25px;
       margin: 20px 0;

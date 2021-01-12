@@ -1,0 +1,33 @@
+main{
+  text-align: center;
+  // world-class
+  .world-class-fitness{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // height: 75vh;
+    padding: 130px 0;
+    background: $mainColor1;
+    h3{
+      color: white;
+      font-size: 35px;
+    }
+    img{
+      margin: 40px 0;
+    }
+    p{
+      line-height: 40px;
+      padding: 0 200px;
+      color: #AEAFAE;
+      font-size: 20px;
+    }
+  }
+  // fine world-class
+
+  // signup
+  .signup{
+    height: 90vh;
+    background: $mainColor2;
+  }
+}

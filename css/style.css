@@ -37,6 +37,11 @@ li {
     transform: translateY(0px);
   }
 }
+main, footer {
+  position: relative;
+  z-index: 2;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/home-banner.jpg");
@@ -45,6 +50,7 @@ header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
 }
 header .header-top {
   display: flex;
@@ -80,6 +86,10 @@ header .header-bottom {
           animation-name: effect;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 header .header-bottom p {
   font-size: 25px;
@@ -98,4 +108,33 @@ header .header-bottom a {
 header .header-bottom a:hover {
   border: 2px solid #fefefe;
   color: #fefefe;
+}
+
+main {
+  text-align: center;
+}
+main .world-class-fitness {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 0;
+  background: #25292B;
+}
+main .world-class-fitness h3 {
+  color: white;
+  font-size: 35px;
+}
+main .world-class-fitness img {
+  margin: 40px 0;
+}
+main .world-class-fitness p {
+  line-height: 40px;
+  padding: 0 200px;
+  color: #AEAFAE;
+  font-size: 20px;
+}
+main .signup {
+  height: 90vh;
+  background: #1E2123;
 }
