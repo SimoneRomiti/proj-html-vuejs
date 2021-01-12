@@ -5,45 +5,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title></title>
   </head>
   <body>
-    <!-- header -->
-    <header>
-      <div class="header-top">
-        <div class="logo">
-          <img src="img/gym_logo_2x.png" alt="">
+    <div id="container">
+      <!-- header -->
+      <header>
+        <div class="header-top">
+          <div class="logo">
+            <img src="img/gym_logo_2x.png" alt="">
+          </div>
+          <nav>
+            <ul>
+              <li v-for="element in headerNav"><a :href="element.link">{{element.name}}</a></li>
+
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">Prova</a></li>
-            <li><a href="#">Prova</a></li>
-            <li><a href="#">Prova</a></li>
-            <li><a href="#">Prova</a></li>
-            <li><a href="#">Prova</a></li>
-            <li><a href="#">Prova</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header-bottom">
-        <h1>NO PAIN NO GAIN</h1>
-        <p>Motivation is what gets you started. Habit is what keeps you going.</p>
-        <a href="#">JOIN US TODAY</a>
-      </div>
-    </header>
-    <!-- /header -->
+        <div class="header-bottom">
+          <h1>NO PAIN NO GAIN</h1>
+          <p>Motivation is what gets you started. Habit is what keeps you going.</p>
+          <a href="#">JOIN US TODAY</a>
+        </div>
+      </header>
+      <!-- /header -->
 
-    <!-- main -->
-    <main>
+      <!-- main -->
+      <main>
 
-    </main>
-    <!-- /main -->
+      </main>
+      <!-- /main -->
 
-    <!-- footer -->
-    <footer>
+      <!-- footer -->
+      <footer>
 
-    </footer>
-    <!-- /footer -->
+      </footer>
+      <!-- /footer -->
+    </div>
+
 
 
     <script src="js/script.js" charset="utf-8"></script>

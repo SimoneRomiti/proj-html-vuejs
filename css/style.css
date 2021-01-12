@@ -42,6 +42,7 @@ header .header-top nav ul {
 }
 header .header-top nav ul li {
   margin: 0 20px;
+  white-space: nowrap;
 }
 header .header-top nav ul li a {
   color: #fefefe;
