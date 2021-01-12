@@ -1,12 +1,13 @@
 main{
   text-align: center;
+
   // world-class
   .world-class-fitness{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // height: 75vh;
+    position: relative;
     padding: 130px 0;
     background: $mainColor1;
     h3{
@@ -22,13 +23,17 @@ main{
       color: $lightgreyColor;
       font-size: 20px;
     }
+    .fa-sort-down{
+      position: absolute;
+      bottom: -8%;
+      font-size: 110px;
+      color: $mainColor1;
+    }
   }
   // fine world-class
 
   // signup
   .signup{
-    // height: 90vh;
-    // padding: 150px 0;
     background: $mainColor2;
     display: flex;
     align-items: center;
@@ -62,25 +67,59 @@ main{
         color: $lightgreyColor;
       }
       .input{
-        width: 100%;
-        margin: 10px 0 20px;
-        height: 40px;
-        background: $mainColor2;
-        border: 1px solid $greyColor;
-        color: white;
+        @include input;
       }
       .input-button{
-        width: 100%;
-        padding: 20px 0;
-        font-size: 18px;
-        margin-top: 30px;
-        background-color: $hoverColor;
-        color: white;
-        border: 0;
-        &:hover{
-          cursor: pointer;
-        }
+        @include inputButton;
       }
     }
   }
+
+  // fine signup
+  .what-we-do{
+    // height: 80vh;
+    padding: 140px 0;
+    background-image: url('../img/gym_bkgd_bw-compressor.jpg');
+    @include backgroundSizeCover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .item{
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      i{
+        @include icons;
+      }
+      .subtitle{
+        margin: 15px 0;
+        @include transition(color, 0.5s);
+      }
+      img{
+        margin-bottom: 15px;
+      }
+      p{
+        color: $lightgreyColor;
+        line-height: 30px;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+      &:hover .subtitle{
+        color: $hoverColor;
+      }
+      &:hover i{
+        transform: scale(0.9);
+        animation-name: pulse;
+        animation-duration: 1.5s;
+      }
+    }
+
+  }
+
 }

@@ -12,3 +12,39 @@
 @mixin transition($property, $sec){
   transition: $property $sec;
 }
+
+@mixin input{
+  width: 100%;
+  margin: 10px 0 20px;
+  height: 40px;
+  background: $mainColor2;
+  border: 1px solid $greyColor;
+  color: white;
+}
+
+@mixin inputButton{
+  width: 100%;
+  padding: 20px 0;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: $hoverColor;
+  color: white;
+  border: 0;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@mixin icons{
+  text-align: center;
+  display: block;
+  height: 90px;
+  width: 90px;
+  line-height: 88px;
+  font-size: 50px;
+  color: $hoverColor;
+  border: 1px solid $hoverColor;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 0 0 0 rgba(213, 98, 95, 1);
+}
