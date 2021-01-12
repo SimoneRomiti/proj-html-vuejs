@@ -1,3 +1,26 @@
-h1{
-  color: red;
+header{
+  height: 100vh;
+  background-image: url('../img/home-banner.jpg');
+  background-position: center;
+  @include backgroundSizeCover;
+  .header-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 90px;
+    .logo{
+      img{
+        width: 50%;
+      }
+    }
+    nav{
+      display: flex;
+      align-items: center;
+      ul{
+        display: flex;
+        li{
+          margin: 0 10px;
+        }
+      }
+    }
+  }
 }

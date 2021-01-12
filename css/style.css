@@ -1,3 +1,41 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../img/home-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 90px;
+}
+header .header-top .logo img {
+  width: 50%;
+}
+header .header-top nav {
+  display: flex;
+  align-items: center;
+}
+header .header-top nav ul {
+  display: flex;
+}
+header .header-top nav ul li {
+  margin: 0 10px;
 }
