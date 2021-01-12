@@ -135,6 +135,57 @@ main .world-class-fitness p {
   font-size: 20px;
 }
 main .signup {
-  height: 90vh;
   background: #1E2123;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 140px 70px;
+}
+main .signup .fit-image {
+  width: 40%;
+}
+main .signup img {
+  height: 300px;
+  transition: transform 0.5s;
+}
+main .signup img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+main .signup .signup-form {
+  width: 45%;
+  color: white;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .signup .signup-form h3 {
+  text-align: left;
+  font-size: 25px;
+}
+main .signup .signup-form label {
+  display: block;
+  text-align: left;
+  color: #AEAFAE;
+}
+main .signup .signup-form .input {
+  width: 100%;
+  margin: 10px 0 20px;
+  height: 40px;
+  background: #1E2123;
+  border: 1px solid #6b6b6b;
+  color: white;
+}
+main .signup .signup-form .input-button {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #d5625f;
+  color: white;
+  border: 0;
+}
+main .signup .signup-form .input-button:hover {
+  cursor: pointer;
 }

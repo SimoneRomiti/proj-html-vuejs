@@ -4,3 +4,11 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+
+@mixin zoomEffect($zoom){
+  transform: scale($zoom);
+}
+
+@mixin transition($property, $sec){
+  transition: $property $sec;
+}

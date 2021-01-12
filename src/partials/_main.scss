@@ -19,7 +19,7 @@ main{
     p{
       line-height: 40px;
       padding: 0 200px;
-      color: #AEAFAE;
+      color: $lightgreyColor;
       font-size: 20px;
     }
   }
@@ -27,7 +27,60 @@ main{
 
   // signup
   .signup{
-    height: 90vh;
+    // height: 90vh;
+    // padding: 150px 0;
     background: $mainColor2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 140px 70px;
+    .fit-image{
+      width: 40%;
+    }
+    img{
+      height: 300px;
+      @include transition(transform, 0.5s);
+      &:hover{
+        @include zoomEffect(1.1);
+        cursor: pointer;
+      }
+    }
+    .signup-form{
+      width: 45%;
+      color: white;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h3{
+        text-align: left;
+        font-size: 25px;
+      }
+      label{
+        display: block;
+        text-align: left;
+        color: $lightgreyColor;
+      }
+      .input{
+        width: 100%;
+        margin: 10px 0 20px;
+        height: 40px;
+        background: $mainColor2;
+        border: 1px solid $greyColor;
+        color: white;
+      }
+      .input-button{
+        width: 100%;
+        padding: 20px 0;
+        font-size: 18px;
+        margin-top: 30px;
+        background-color: $hoverColor;
+        color: white;
+        border: 0;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
