@@ -150,8 +150,33 @@ main{
       img{
         margin: 20px;
         width: calc(100% / 3 - 40px);
+        @include transition(transform, 0.2s);
+        &:hover{
+          @include zoomEffect(1.1);
+          cursor: pointer;
+        }
       }
     }
+  }
+  // fine facilities
 
+  // quote
+  .quote{
+    height: 80vh;
+    background-image: url('../img/home-testimonial-bg.jpg');
+    @include backgroundSizeCover;
+    background-position: center;
+    color: white;
+    padding: 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      font-size: 25px;
+      line-height: 40px;
+    }
+    h3{
+      margin-top: 30px;
+    }
   }
 }

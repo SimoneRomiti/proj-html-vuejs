@@ -328,4 +328,30 @@ main .facilities .flex-container {
 main .facilities .flex-container img {
   margin: 20px;
   width: calc(100% / 3 - 40px);
+  transition: transform 0.2s;
+}
+main .facilities .flex-container img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+main .quote {
+  height: 80vh;
+  background-image: url("../img/home-testimonial-bg.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 0 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .quote p {
+  font-size: 25px;
+  line-height: 40px;
+}
+main .quote h3 {
+  margin-top: 30px;
 }
