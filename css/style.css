@@ -65,6 +65,18 @@ main, footer {
     box-shadow: 0 0 0 0 rgba(213, 98, 95, 0);
   }
 }
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.5s;
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/home-banner.jpg");
@@ -131,6 +143,7 @@ header .header-bottom a {
 header .header-bottom a:hover {
   border: 2px solid #fefefe;
   color: #fefefe;
+  cursor: pointer;
 }
 
 main {
@@ -280,7 +293,7 @@ main .what-we-do .item:hover i {
           animation-delay: 0.05s;
 }
 main .results {
-  padding: 140px 0;
+  padding: 140px 60px;
   background: #25292B;
 }
 main .results h2 {
@@ -294,13 +307,14 @@ main .results .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100%;
 }
 main .results .results-item {
   background: #1E2123;
-  margin: 20px;
+  margin: 25px;
   padding: 30px;
   display: flex;
-  width: 40%;
+  width: calc(100% / 2 - 50px);
   color: #AEAFAE;
 }
 main .results .results-item p, main .results .results-item h4 {
@@ -309,9 +323,8 @@ main .results .results-item p, main .results .results-item h4 {
   line-height: 30px;
 }
 main .facilities {
-  padding: 140px 0;
-  background: #25292B;
   padding: 140px 60px;
+  background: #25292B;
 }
 main .facilities h2 {
   color: white;
@@ -324,6 +337,7 @@ main .facilities .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100%;
 }
 main .facilities .flex-container img {
   margin: 20px;
@@ -349,9 +363,116 @@ main .quote {
   justify-content: center;
 }
 main .quote p {
-  font-size: 25px;
+  font-size: 28px;
+  letter-spacing: 3px;
   line-height: 40px;
 }
 main .quote h3 {
   margin-top: 30px;
+}
+main .trainers-container {
+  padding: 140px 60px;
+  background: #25292B;
+  background: #1E2123;
+  position: relative;
+}
+main .trainers-container h2 {
+  color: white;
+  font-size: 35px;
+}
+main .trainers-container .divider {
+  margin: 30px 0;
+}
+main .trainers-container .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+main .trainers-container .trainers {
+  background: #25292B;
+  margin: 25px;
+  width: calc(100% / 3 - 50px);
+  text-align: left;
+}
+main .trainers-container .trainers img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+main .trainers-container .trainers img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+main .trainers-container .trainers .info {
+  padding: 50px 40px;
+}
+main .trainers-container .trainers h4 {
+  color: white;
+  margin-bottom: 5px;
+}
+main .trainers-container .trainers p {
+  margin: 20px 0;
+  color: #AEAFAE;
+  line-height: 30px;
+}
+main .trainers-container .trainers .social {
+  color: white;
+  font-size: 20px;
+}
+main .trainers-container .trainers .social i {
+  text-align: center;
+  line-height: 45px;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  background: #1E2123;
+}
+main .trainers-container .trainers .social i:nth-child(2) {
+  margin: 0 5px;
+}
+main .trainers-container .trainers .social i:hover {
+  cursor: pointer;
+}
+main .trainers-container .hidden-trainers {
+  padding: 140px 60px;
+  background: #25292B;
+}
+main .trainers-container .hidden-trainers h2 {
+  color: white;
+  font-size: 35px;
+}
+main .trainers-container .hidden-trainers .divider {
+  margin: 30px 0;
+}
+main .trainers-container .hidden-trainers .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+main .trainers-container .view {
+  margin-top: 70px;
+  display: inline-block;
+  border: 2px solid #6b6b6b;
+  color: #6b6b6b;
+  background: transparent;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+main .trainers-container .view:hover {
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  cursor: pointer;
+}
+main .trainers-container .fa-sort-down {
+  font-size: 110px;
+  position: absolute;
+  color: #1E2123;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .news {
+  height: 50vh;
 }

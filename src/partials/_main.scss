@@ -125,13 +125,13 @@ main{
 
   // results
   .results{
-    @include results-facilities;
+    @include results-facilities-trainers;
     .results-item{
       background: $mainColor2;
-      margin: 20px;
+      margin: 25px;
       padding: 30px;
       display: flex;
-      width: 40%;
+      width: calc(100% / 2 - 50px);
       color: $lightgreyColor;
       p, h4{
         padding: 0 20px;
@@ -144,8 +144,7 @@ main{
 
   // facilities
   .facilities{
-    @include results-facilities;
-    padding: 140px 60px;
+    @include results-facilities-trainers;
     .flex-container{
       img{
         margin: 20px;
@@ -172,11 +171,84 @@ main{
     flex-direction: column;
     justify-content: center;
     p{
-      font-size: 25px;
+      font-size: 28px;
+      letter-spacing: 3px;
       line-height: 40px;
     }
     h3{
       margin-top: 30px;
     }
+  }
+  // fine quote
+
+  // trainers
+  .trainers-container{
+    @include results-facilities-trainers;
+    background: $mainColor2;
+    position: relative;
+    .trainers{
+      background: $mainColor1;
+      margin: 25px;
+      width: calc(100% / 3 - 50px);
+      text-align: left;
+      img{
+        width: 100%;
+        @include transition(transform, 0.4s);
+        &:hover{
+          cursor: pointer;
+          @include zoomEffect(1.1);
+        }
+      }
+      .info{
+        padding: 50px 40px;
+      }
+      h4{
+        color: white;
+        margin-bottom: 5px;
+      }
+      p{
+        margin: 20px 0;
+        color: $lightgreyColor;
+        line-height: 30px;
+      }
+      .social{
+        color: white;
+        font-size: 20px;
+        i{
+          text-align: center;
+          line-height: 45px;
+          display: inline-block;
+          height: 45px;
+          width: 45px;
+          background: $mainColor2;
+          &:nth-child(2){
+            margin: 0 5px;
+          }
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .hidden-trainers{
+      @include results-facilities-trainers;
+    }
+    .view{
+      margin-top: 70px;
+      @include button;
+    }
+    .fa-sort-down{
+      font-size: 110px;
+      position: absolute;
+      color: $mainColor2;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  // fine trainers
+
+  // news
+  .news{
+    height: 50vh;
   }
 }

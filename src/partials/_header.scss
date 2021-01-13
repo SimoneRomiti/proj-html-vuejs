@@ -47,18 +47,7 @@ header{
       margin: 20px 0;
     }
     a{
-      display: inline-block;
-      border: 2px solid $greyColor;
-      color: $greyColor;
-      background: transparent;
-      padding: 15px 30px;
-      font-size: 20px;
-      font-weight: 700;
-      @include transition(all, 0.3s);
-      &:hover{
-        border: 2px solid $whiteColor;
-        color: $whiteColor;
-      }
+      @include button;
     }
   }
 }

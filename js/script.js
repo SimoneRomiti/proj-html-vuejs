@@ -2,6 +2,8 @@ var app = new Vue(
   {
     el: '#container',
     data: {
+      view: false,
+      bottom: '-3.1%',
       headerNav: [
         {
           name: 'HOME',
@@ -49,7 +51,57 @@ var app = new Vue(
           text: '“No bad things to say about Avada Gym, they are top notch at every corner and truly take care of their customers.”',
           name: 'Jeff Glum'
         }
-      ]
+      ],
+      trainers: [
+        {
+          photo: 'img/trainer1.jpg',
+          name: 'Ann Baker',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+        {
+          photo: 'img/trainer3.jpg',
+          name: 'Anne Warren',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+        {
+          photo: 'img/trainer4.jpg',
+          name: 'Peter Rice',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+      ],
+      hiddenTrainers: [
+        {
+          photo: 'img/trainer1.jpg',
+          name: 'Ann Baker',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+        {
+          photo: 'img/trainer3.jpg',
+          name: 'Anne Warren',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+        {
+          photo: 'img/trainer4.jpg',
+          name: 'Peter Rice',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+      ],
+    },
+
+    methods: {
+      viewTrainers: function(){
+        if(this.view == false){
+          this.view = true;
+          this.bottom = '-2%';
+        } else{
+          this.view = false;
+          setTimeout(() => {
+            this.bottom = '-3.1%';
+          }, 525)
+        }
+
+        console.log(this.view);
+      }
     }
   }
 )
