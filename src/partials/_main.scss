@@ -125,7 +125,7 @@ main{
 
   // results
   .results{
-    @include results-facilities-trainers;
+    @include results-facilities-trainers-news;
     .results-item{
       background: $mainColor2;
       margin: 25px;
@@ -144,7 +144,7 @@ main{
 
   // facilities
   .facilities{
-    @include results-facilities-trainers;
+    @include results-facilities-trainers-news;
     .flex-container{
       img{
         margin: 20px;
@@ -183,7 +183,7 @@ main{
 
   // trainers
   .trainers-container{
-    @include results-facilities-trainers;
+    @include results-facilities-trainers-news;
     background: $mainColor2;
     position: relative;
     .trainers{
@@ -231,7 +231,7 @@ main{
       }
     }
     .hidden-trainers{
-      @include results-facilities-trainers;
+      @include results-facilities-trainers-news;
     }
     .view{
       margin-top: 70px;
@@ -249,6 +249,42 @@ main{
 
   // news
   .news{
-    height: 50vh;
+    @include results-facilities-trainers-news;
+    background: $mainColor1;
+    .float-element::after{
+      @include clearfix;
+    }
+    .col{
+      float: left;
+      margin: 20px 25px;
+      width: calc(100% / 3 - 50px);
+    }
+    .article{
+      align-self: flex-start;
+      background: $mainColor2;
+      text-align: left;
+      &:nth-child(2){
+        margin: 50px 0;
+      }
+      img{
+        width: 100%;
+      }
+      .article-text{
+        padding: 20px 10px;
+        line-height: 30px;
+      }
+      h3{
+        color: white;
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+      p{
+        color: $lightgreyColor;
+        font-size: 18px;
+      }
+    }
+    .button{
+      @include button;
+    }
   }
 }

@@ -7,6 +7,12 @@
 body{
   font-family: 'Lato', sans-serif;
 }
+
+main, footer{
+  position: relative;
+  z-index: 2;
+}
+
 a{
   text-decoration: none;
 }
@@ -24,11 +30,6 @@ li{
     opacity: 1;
     transform: translateY(0px);
   }
-}
-
-main, footer{
-  position: relative;
-  z-index: 2;
 }
 
 @keyframes pulse{
