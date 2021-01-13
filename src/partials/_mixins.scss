@@ -48,3 +48,20 @@
   transition: transform 0.2s;
   box-shadow: 0 0 0 0 rgba(213, 98, 95, 1);
 }
+
+@mixin results-facilities{
+  padding: 140px 0;
+  background: $mainColor1;
+  h2{
+    color: white;
+    font-size: 35px;
+  }
+  .divider{
+    margin: 30px 0;
+  }
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
