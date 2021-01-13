@@ -277,3 +277,32 @@ main .what-we-do .item:hover i {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
+main .results {
+  padding: 140px 0;
+  background: #25292B;
+}
+main .results h2 {
+  color: white;
+  font-size: 35px;
+}
+main .results .divider {
+  margin: 30px 0;
+}
+main .results .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .results .results-item {
+  background: #1E2123;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  width: 40%;
+  color: #AEAFAE;
+}
+main .results .results-item p, main .results .results-item h4 {
+  padding: 0 20px;
+  text-align: left;
+  line-height: 30px;
+}

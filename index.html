@@ -90,6 +90,24 @@
           </div>
 
         </div>
+        <!-- /what-we-do -->
+
+        <!-- results -->
+        <div class="results">
+          <h2>REAL WORLD RESULTS</h2>
+          <img class="divider" src="img/divider-xx-red.png" alt="">
+          <div class="flex-container">
+            <div v-for="element in results" class="results-item">
+              <img :src="element.image" alt="">
+              <div class="results-text">
+                <p><i>{{element.text}}</i></p>
+                <h4>- {{element.name}}</h4>
+              </div>
+            </div>
+
+
+        </div>
+        <!-- /results -->
       </main>
       <!-- /main -->
 
