@@ -86,6 +86,44 @@ var app = new Vue(
           info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
         },
       ],
+      post: [
+        {
+          image: 'img/blog1.jpg',
+          title: 'Train with free weights or your body weight?',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+        {
+          image: 'img/blog4-400x289.jpg',
+          title: 'To be number one, train like you’re number two',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+        {
+          image: 'img/blog6.jpg',
+          title: 'Nutritional advice that will keep you training',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+        {
+          image: 'img/trainer3-400x297.jpg',
+          title: 'Top 5 mistakes every gym member makes',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+        {
+          image: 'img/trainer4-400x297.jpg',
+          title: 'Simple principles for your next workout',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+        {
+          image: 'img/trainer1-400x297.jpg',
+          title: 'The myths of shedding body fat explored',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]'
+        },
+      ],
+      company: {
+        address: '12345 North Main Street',
+        city: 'New York, NY 555555',
+        phone: 'Phone: 1.800.555.6789',
+        email: 'Email: info@your-domain.com'
+      }
     },
 
     methods: {

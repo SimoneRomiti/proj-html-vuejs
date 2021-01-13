@@ -134,6 +134,7 @@
         <div class="trainers-container">
           <h2>MEET OUR TRAINERS</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
+          <!-- trainers visibili -->
           <div class="flex-container">
             <div v-for="trainer in trainers" class="trainers">
               <img :src="trainer.photo" alt="">
@@ -149,7 +150,9 @@
               </div>
             </div>
           </div>
+          <!-- /trainers visibili -->
 
+          <!-- trainers nascosti -->
           <transition-group name="fade" tag="div" class="flex-container">
             <div v-if="view" v-for="hiddenTrainer in hiddenTrainers" class="trainers" :key="hiddenTrainer.name">
               <img :src="hiddenTrainer.photo" alt="">
@@ -165,6 +168,7 @@
               </div>
             </div>
           </transition-group>
+          <!-- /trainers nascosti -->
 
           <div @click="viewTrainers()" class="view">
             <span v-if="view == false">VIEW ALL TRAINERS</span>
@@ -183,71 +187,143 @@
           </div>
 
           <div class="float-element">
+            <!-- prima colonna -->
             <div class="col">
               <div class="article">
-                <img src="img/blog1.jpg" alt="">
+                <img :src="post[0].image" alt="">
                 <div class="article-text">
-                  <h3>Train with free weights or your body weight?</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[0].title}}</h3>
+                  <p>{{post[0].text}}</p>
                 </div>
               </div>
 
               <div class="article">
-                <img src="img/blog4-400x289.jpg" alt="">
+                <img :src="post[1].image" alt="">
                 <div class="article-text">
-                  <h3>To be number one, train like you’re number two</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[1].title}}</h3>
+                  <p>{{post[1].text}}</p>
                 </div>
               </div>
             </div>
+            <!-- /prima colonna -->
 
+            <!-- seconda colonna -->
             <div class="col">
               <div class="article">
-                <img src="img/blog6.jpg" alt="">
+                <img :src="post[2].image" alt="">
                 <div class="article-text">
-                  <h3>Nutritional advice that will keep you training</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[2].title}}</h3>
+                  <p>{{post[2].text}}</p>
                 </div>
               </div>
 
               <div class="article">
-                <img src="img/trainer3-400x297.jpg" alt="">
+                <img :src="post[3].image" alt="">
                 <div class="article-text">
-                  <h3>Top 5 mistakes every gym member makes</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[3].title}}</h3>
+                  <p>{{post[3].text}}</p>
                 </div>
               </div>
             </div>
+            <!-- /seconda colonna -->
 
+            <!-- terza colonna -->
             <div class="col">
               <div class="article">
-                <img src="img/trainer4-400x297.jpg" alt="">
+                <img :src="post[4].image" alt="">
                 <div class="article-text">
-                  <h3>Simple principles for your next workout</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[4].title}}</h3>
+                  <p>{{post[4].text}}</p>
                 </div>
               </div>
 
               <div class="article">
-                <img src="img/trainer1-400x297.jpg" alt="">
+                <img :src="post[5].image" alt="">
                 <div class="article-text">
-                  <h3>The myths of shedding body fat explored</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]</p>
+                  <h3>{{post[5].title}}</h3>
+                  <p>{{post[5].text}}</p>
                 </div>
               </div>
             </div>
+            <!-- /terza colonna -->
           </div>
 
           <div class="button">
             READ ALL ARTICLES
           </div>
         </div>
+
+        <div class="goals">
+          <div class="text">
+            <h2>Achieve Your Fitness Goals</h2>
+            <p>Flexible membership packages to suit all levels of athlete and achive your fitness goals</p>
+          </div>
+          <div class="button">
+            JOIN US
+          </div>
+        </div>
+
+
       </main>
       <!-- /main -->
 
       <!-- footer -->
       <footer>
+        <div class="footer-top">
+          <div class="find-us width">
+            <h4>COME FIND US</h4>
+            <div class="address">
+              {{company.address}}
+            </div>
+            <div class="city">
+              {{company.city}}
+            </div>
+            <div class="phone">
+              {{company.phone}}
+            </div>
+            <div class="email">
+              {{company.email}}
+            </div>
+          </div>
 
+          <div class="posts width">
+            <h4>RECENT POSTS</h4>
+            <div class="first">
+              {{post[0].title}}
+            </div>
+            <div class="second">
+              {{post[2].title}}
+            </div>
+          </div>
+
+          <div class="opening width">
+            <h4>OPENING TIMES</h4>
+            <div class="weekdays">
+              <div class="days">
+                Weekdays Monday - Friday
+              </div>
+              <div class="hour">
+                09:00 - 19:00
+              </div>
+            </div>
+            <div class="weekend">
+              <div class="days">
+                Weekends Saturday - Sunday
+              </div>
+              <div class="hour">
+                09:00 - 21:00
+              </div>
+            </div>
+          </div>
+
+          <div class="image width">
+            <img src="img/gym_ad-compressor.jpg" alt="">
+          </div>
+
+        </div>
+        <div class="footer-bottom">
+
+        </div>
       </footer>
       <!-- /footer -->
     </div>

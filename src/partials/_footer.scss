@@ -1,0 +1,46 @@
+footer{
+  .footer-top{
+    background: $mainColor2;
+    padding: 70px 90px;
+    display: flex;
+    justify-content: space-around;
+    color: #99998D;
+    line-height: 30px;
+    .width{
+      width: calc(100% / 4 - 40px);
+      margin: 20px;
+    }
+    h4{
+      color: #647178;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .first, .second{
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(153, 153, 141, 0.3);
+      @include transition(color, 0.4s);
+      &:hover{
+        color: $hoverColor;
+        cursor: pointer;
+      }
+    }
+    .second{
+      padding-top: 10px;
+    }
+    img{
+      width: 100%;
+    }
+    .weekdays{
+      margin-bottom: 15px;
+    }
+    .hour{
+      color: rgba(153, 153, 141, 0.3);
+    }
+
+  }
+  .footer-bottom{
+    height: 20vh;
+    background: $footerBottomColor;
+  }
+
+}

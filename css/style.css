@@ -181,7 +181,7 @@ main .signup {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 140px 70px;
+  padding: 140px 90px;
 }
 main .signup .fit-image {
   width: 40%;
@@ -292,7 +292,7 @@ main .what-we-do .item:hover i {
           animation-delay: 0.05s;
 }
 main .results {
-  padding: 140px 60px;
+  padding: 140px 90px;
   background: #25292B;
 }
 main .results h2 {
@@ -322,7 +322,7 @@ main .results .results-item p, main .results .results-item h4 {
   line-height: 30px;
 }
 main .facilities {
-  padding: 140px 60px;
+  padding: 140px 90px;
   background: #25292B;
 }
 main .facilities h2 {
@@ -370,7 +370,7 @@ main .quote h3 {
   margin-top: 30px;
 }
 main .trainers-container {
-  padding: 140px 60px;
+  padding: 140px 90px;
   background: #25292B;
   background: #1E2123;
   position: relative;
@@ -433,7 +433,7 @@ main .trainers-container .trainers .social i:hover {
   cursor: pointer;
 }
 main .trainers-container .hidden-trainers {
-  padding: 140px 60px;
+  padding: 140px 90px;
   background: #25292B;
 }
 main .trainers-container .hidden-trainers h2 {
@@ -473,7 +473,7 @@ main .trainers-container .fa-sort-down {
   transform: translateX(-50%);
 }
 main .news {
-  padding: 140px 60px;
+  padding: 140px 90px;
   background: #25292B;
   background: #25292B;
 }
@@ -512,7 +512,7 @@ main .news .article img {
   width: 100%;
 }
 main .news .article .article-text {
-  padding: 20px 10px;
+  padding: 25px 25px;
   line-height: 30px;
 }
 main .news .article h3 {
@@ -522,7 +522,7 @@ main .news .article h3 {
 }
 main .news .article p {
   color: #AEAFAE;
-  font-size: 18px;
+  font-size: 16px;
 }
 main .news .button {
   display: inline-block;
@@ -538,4 +538,90 @@ main .news .button:hover {
   border: 2px solid #fefefe;
   color: #fefefe;
   cursor: pointer;
+}
+main .goals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 90px;
+  text-align: left;
+  height: 35vh;
+  background-image: url("../img/home-parallax.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  color: white;
+}
+main .goals h2 {
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+main .goals p {
+  font-size: 20px;
+}
+main .goals .button {
+  display: inline-block;
+  border: 2px solid #6b6b6b;
+  color: #6b6b6b;
+  background: transparent;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.3s;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+}
+main .goals .button:hover {
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  cursor: pointer;
+}
+main .goals .button:hover {
+  border: 1px solid #fefefe;
+}
+
+footer .footer-top {
+  background: #1E2123;
+  padding: 70px 90px;
+  display: flex;
+  justify-content: space-around;
+  color: #99998D;
+  line-height: 30px;
+}
+footer .footer-top .width {
+  width: calc(100% / 4 - 40px);
+  margin: 20px;
+}
+footer .footer-top h4 {
+  color: #647178;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+footer .footer-top .first, footer .footer-top .second {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(153, 153, 141, 0.3);
+  transition: color 0.4s;
+}
+footer .footer-top .first:hover, footer .footer-top .second:hover {
+  color: #d5625f;
+  cursor: pointer;
+}
+footer .footer-top .second {
+  padding-top: 10px;
+}
+footer .footer-top img {
+  width: 100%;
+}
+footer .footer-top .weekdays {
+  margin-bottom: 15px;
+}
+footer .footer-top .hour {
+  color: rgba(153, 153, 141, 0.3);
+}
+footer .footer-bottom {
+  height: 20vh;
+  background: #191C1E;
 }
