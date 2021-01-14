@@ -6,6 +6,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: black;
 }
 
 main, footer {
@@ -44,6 +45,42 @@ li {
   cursor: pointer;
 }
 
+.charger {
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.charger i {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 #d5625f;
@@ -55,7 +92,6 @@ li {
     box-shadow: 0 0 0 0 rgba(213, 98, 95, 0);
   }
 }
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 #d5625f;

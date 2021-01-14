@@ -14,8 +14,13 @@
   </head>
   <body>
     <div id="container">
+
+      <div class="charger" v-if="!visible">
+        <i class="fas fa-circle-notch"></i>
+      </div>
+      
       <!-- header -->
-      <header :style="{backgroundImage: 'url(' + currentBackground + ')' }">
+      <header v-if="visible" :style="{backgroundImage: 'url(' + currentBackground + ')' }">
         <div class="header-top">
           <div class="logo">
             <img src="img/gym_logo_2x.png" alt="">
@@ -42,18 +47,18 @@
       <!-- /header -->
 
       <!-- main -->
-      <main>
+      <main v-if="visible">
         <!-- world-class -->
-        <div class="world-class-fitness">
+        <section class="world-class-fitness">
           <h3>WORLD CLASS Fitness</h3>
           <img src="img/divider-xx-red.png" alt="">
           <p>At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we’re equipped to help you reach your goals of a healthy and fit lifestyle.</p>
           <i class="fas fa-sort-down"></i>
-        </div>
+        </section>
         <!-- /world-class -->
 
         <!-- signup -->
-        <div class="signup">
+        <section class="signup">
           <div class="fit-image">
             <img src="img/home_img-compressor.jpg" alt="">
           </div>
@@ -68,11 +73,11 @@
             </form>
 
           </div>
-        </div>
+        </section>
         <!-- /signup -->
 
         <!-- what-we-do -->
-        <div class="what-we-do">
+        <section class="what-we-do">
           <div class="item">
             <i class="fas fa-unlink"></i>
             <h4 class="subtitle">Strength & Conditioning</h4>
@@ -98,11 +103,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, nostrum.</p>
           </div>
 
-        </div>
+        </section>
         <!-- /what-we-do -->
 
         <!-- results -->
-        <div class="results">
+        <section class="results">
           <h2>REAL WORLD RESULTS</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
           <div class="flex-container">
@@ -114,11 +119,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- /results -->
 
         <!-- facilities -->
-        <div class="facilities">
+        <section class="facilities">
           <h2>HIGH PERFORMANCE FACILITIES</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
           <div class="flex-container">
@@ -129,18 +134,18 @@
             <img src="img/home-image5.jpg" alt="">
             <img src="img/home-image6.jpg" alt="">
           </div>
-        </div>
+        </section>
         <!-- /facilities -->
 
         <!-- quote -->
-        <div class="quote">
+        <section class="quote">
           <p>“ I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times ”</p>
           <h3>BRUCE LEE • QUOTE OF THE DAY</h3>
-        </div>
+        </section>
         <!-- /quote -->
 
         <!-- trainers -->
-        <div class="trainers-container">
+        <section class="trainers-container">
           <h2>MEET OUR TRAINERS</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
           <!-- trainers visibili -->
@@ -185,11 +190,11 @@
           </div>
 
           <i class="fas fa-sort-down" :style="{bottom: bottom}"></i>
-        </div>
+        </section>
         <!-- /trainers -->
 
         <!-- news -->
-        <div class="news">
+        <section class="news">
           <h2>PERFORMANCE NEWS</h2>
           <div class="">
             <img class="divider" src="img/divider-xx-red.png" alt="">
@@ -296,9 +301,11 @@
           <div class="button">
             READ ALL ARTICLES
           </div>
-        </div>
+        </section>
+        <!-- /news -->
 
-        <div class="goals">
+        <!-- goals -->
+        <section class="goals">
           <div class="text">
             <h2>Achieve Your Fitness Goals</h2>
             <p>Flexible membership packages to suit all levels of athlete and achive your fitness goals</p>
@@ -306,14 +313,14 @@
           <div class="button">
             JOIN US
           </div>
-        </div>
-
+        </section>
+        <!-- /goals -->
 
       </main>
       <!-- /main -->
 
       <!-- footer -->
-      <footer>
+      <footer v-if="visible">
         <div class="footer-top">
           <div class="find-us width">
             <h4>COME FIND US</h4>
@@ -380,8 +387,8 @@
         </div>
       </footer>
       <!-- /footer -->
-    </div>
 
+    </div>
 
 
     <script src="js/script.js" charset="utf-8"></script>

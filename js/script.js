@@ -8,6 +8,7 @@ var app = new Vue(
       scrollHeight: '',
       scrollGreaterHeight: '',
       navElement: 0,
+      visible: false,
       backgrounds: [
         'img/home-banner.jpg',
         'img/about-banner.webp',
@@ -155,6 +156,12 @@ var app = new Vue(
         phone: 'Phone: 1.800.555.6789',
         email: 'Email: info@your-domain.com'
       }
+    },
+
+    created: function(){
+      setTimeout(() => {
+        this.visible = true;
+      }, 1000)
     },
 
     methods: {
