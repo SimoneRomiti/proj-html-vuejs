@@ -7,6 +7,34 @@ var app = new Vue(
       scrollPosition: '',
       scrollHeight: '',
       scrollGreaterHeight: '',
+      navElement: 0,
+      backgrounds: [
+        'img/home-banner.jpg',
+        'img/about-banner.webp',
+        'img/facilities-banner.jpg',
+        'img/join-banner.webp',
+        'img/testimonial-banner-compressor-2.jpg',
+        'img/blog-banner.jpg'
+      ],
+      currentBackground: 'img/home-banner.jpg',
+      titles: [
+        'NO PAIN NO GAIN',
+        'AVADA GYM',
+        'GYM FACILITIES',
+        'JOIN OUR GYM',
+        'RAVE REVIEWS',
+        'FITNESS BLOG'
+      ],
+      currentTitle: 'NO PAIN NO GAIN',
+      paragraphs: [
+        'Motivation is what gets you started. Habit is what keeps you going.',
+        'Motivation will always beat talent',
+        'The finish line is just the beginning of a whole new race',
+        'In seeking happiness for others, you find it for yourself',
+        'Incredible stories of real client success',
+        'The latest news to keep your mind and body fit'
+      ],
+      currentParagraph: 'Motivation is what gets you started. Habit is what keeps you going.',
       headerNav: [
         {
           name: 'HOME',
@@ -132,7 +160,6 @@ var app = new Vue(
     methods: {
       viewTrainers: function(){
         if(this.view == false){
-
           this.scrollPosition = document.getElementsByClassName('trainers-container');
           this.scrollHeight = this.scrollPosition[0].offsetHeight;
 
@@ -149,11 +176,9 @@ var app = new Vue(
           },0)
 
         } else{
-
           this.view = false;
           setTimeout(() => {
             this.bottom = '-3.1%';
-
           }, 525)
 
           window.scrollTo({
@@ -161,8 +186,15 @@ var app = new Vue(
             behavior: 'smooth'
           });
         }
+      },
 
-        console.log(this.view);
+      changeHeader: function(i){
+        this.navElement = i;
+        setTimeout(() => {
+          this.currentBackground = this.backgrounds[i];
+          this.currentTitle = this.titles[i];
+          this.currentParagraph = this.paragraphs[i];
+        }, 0)
       }
     }
   }

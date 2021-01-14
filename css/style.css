@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+header .header-top nav ul li a.colored {
+  color: #d5625f;
+}
+
 li {
   list-style: none;
 }
@@ -40,27 +44,6 @@ li {
   cursor: pointer;
 }
 
-@-webkit-keyframes effect {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes effect {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 #d5625f;
@@ -72,6 +55,7 @@ li {
     box-shadow: 0 0 0 0 rgba(213, 98, 95, 0);
   }
 }
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 #d5625f;
@@ -97,7 +81,8 @@ li {
 
 header {
   height: 100vh;
-  background-image: url("../img/home-banner.jpg");
+  background-color: black;
+  transition: background-image 0.5s;
   background-position: center;
   background-size: cover;
   -webkit-background-size: cover;
@@ -135,10 +120,6 @@ header .header-bottom {
   text-align: center;
   color: #fefefe;
   font-size: 55px;
-  -webkit-animation-name: effect;
-          animation-name: effect;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
   position: fixed;
   left: 0;
   right: 0;

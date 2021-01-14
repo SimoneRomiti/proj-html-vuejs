@@ -4,6 +4,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -12,22 +15,28 @@
   <body>
     <div id="container">
       <!-- header -->
-      <header>
+      <header :style="{backgroundImage: 'url(' + currentBackground + ')' }">
         <div class="header-top">
           <div class="logo">
             <img src="img/gym_logo_2x.png" alt="">
           </div>
           <nav>
             <ul>
-              <li v-for="element in headerNav"><a :href="element.link">{{element.name}}</a></li>
+              <li v-for="(element, index) in headerNav" >
+                <a :href="element.link" @click="changeHeader(index)" :class="(index == navElement) ? 'colored' : ''">
+                  {{element.name}}
+                </a>
+              </li>
 
             </ul>
           </nav>
         </div>
         <div class="header-bottom">
-          <h1>NO PAIN NO GAIN</h1>
-          <p>Motivation is what gets you started. Habit is what keeps you going.</p>
-          <a href="#">JOIN US TODAY</a>
+          <h1 v-for="(title, index) in titles" v-if="index == navElement" class="animate__animated animate__fadeInUp">{{title}}</h1>
+
+          <p v-for="(paragraph, index) in paragraphs" v-if="index == navElement" class="animate__animated animate__fadeInUp">{{paragraph}}</p>
+
+          <a v-if="navElement == 0" class="animate__animated animate__fadeInUp" href="#">JOIN US TODAY</a>
         </div>
       </header>
       <!-- /header -->
