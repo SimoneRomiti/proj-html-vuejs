@@ -71,6 +71,11 @@ var app = new Vue(
       ],
       hiddenTrainers: [
         {
+          photo: 'img/trainer2.webp',
+          name: 'Alex Silva',
+          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
+        },
+        {
           photo: 'img/trainer1.jpg',
           name: 'Ann Baker',
           info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
@@ -78,11 +83,6 @@ var app = new Vue(
         {
           photo: 'img/trainer3.jpg',
           name: 'Anne Warren',
-          info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
-        },
-        {
-          photo: 'img/trainer4.jpg',
-          name: 'Peter Rice',
           info: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, cupiditate! Magnam voluptatum rerum sequi, debitis.'
         },
       ],

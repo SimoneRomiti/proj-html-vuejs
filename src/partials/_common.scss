@@ -20,7 +20,26 @@ li{
   list-style: none;
 }
 
+.social{
+  color: white;
+  font-size: 20px;
+  i{
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background: $mainColor2;
+    &:nth-child(2){
+      margin: 0 5px;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
 
+// animation effect
 @keyframes effect{
   0%{
     opacity: 0;
@@ -32,6 +51,7 @@ li{
   }
 }
 
+// animation pulse
 @keyframes pulse{
   0%{
     box-shadow: 0 0 0 0 rgba(213, 98, 95, 1);
@@ -44,6 +64,7 @@ li{
   }
 }
 
+// transition-group fade
 .fade-enter, .fade-leave-to{
   opacity: 0;
 }

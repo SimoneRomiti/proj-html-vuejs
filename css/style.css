@@ -21,6 +21,25 @@ li {
   list-style: none;
 }
 
+.social {
+  color: white;
+  font-size: 20px;
+}
+.social i {
+  text-align: center;
+  line-height: 45px;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  background: #1E2123;
+}
+.social i:nth-child(2) {
+  margin: 0 5px;
+}
+.social i:hover {
+  cursor: pointer;
+}
+
 @-webkit-keyframes effect {
   0% {
     opacity: 0;
@@ -232,7 +251,7 @@ main .signup .signup-form .input-button:hover {
   cursor: pointer;
 }
 main .what-we-do {
-  padding: 140px 0;
+  padding: 140px 90px;
   background-image: url("../img/gym_bkgd_bw-compressor.jpg");
   background-size: cover;
   -webkit-background-size: cover;
@@ -414,24 +433,6 @@ main .trainers-container .trainers p {
   color: #AEAFAE;
   line-height: 30px;
 }
-main .trainers-container .trainers .social {
-  color: white;
-  font-size: 20px;
-}
-main .trainers-container .trainers .social i {
-  text-align: center;
-  line-height: 45px;
-  display: inline-block;
-  height: 45px;
-  width: 45px;
-  background: #1E2123;
-}
-main .trainers-container .trainers .social i:nth-child(2) {
-  margin: 0 5px;
-}
-main .trainers-container .trainers .social i:hover {
-  cursor: pointer;
-}
 main .trainers-container .hidden-trainers {
   padding: 140px 90px;
   background: #25292B;
@@ -587,10 +588,11 @@ main .goals {
   color: white;
 }
 main .goals h2 {
-  margin-bottom: 15px;
+  margin: 0 25px 15px;
   font-size: 35px;
 }
 main .goals p {
+  margin: 25px;
   font-size: 20px;
 }
 main .goals .button {
@@ -604,6 +606,7 @@ main .goals .button {
   transition: all 0.3s;
   color: #cccccc;
   border: 1px solid #cccccc;
+  margin: 25px;
 }
 main .goals .button:hover {
   border: 2px solid #fefefe;
@@ -618,13 +621,13 @@ footer .footer-top {
   background: #1E2123;
   padding: 70px 90px;
   display: flex;
-  justify-content: space-around;
-  color: #99998D;
+  justify-content: space-between;
+  color: #AEAFAE;
   line-height: 30px;
 }
 footer .footer-top .width {
   width: calc(100% / 4 - 40px);
-  margin: 20px;
+  margin: 25px;
 }
 footer .footer-top h4 {
   color: #647178;
@@ -635,6 +638,10 @@ footer .footer-top .first, footer .footer-top .second {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(153, 153, 141, 0.3);
   transition: color 0.4s;
+}
+footer .footer-top .first i, footer .footer-top .second i {
+  font-size: 14px;
+  margin-right: 5px;
 }
 footer .footer-top .first:hover, footer .footer-top .second:hover {
   color: #d5625f;
@@ -653,6 +660,20 @@ footer .footer-top .hour {
   color: rgba(153, 153, 141, 0.3);
 }
 footer .footer-bottom {
-  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 90px;
   background: #191C1E;
+  color: #AEAFAE;
+  font-size: 14px;
+}
+footer .footer-bottom .copyright {
+  margin: 0 25px;
+}
+footer .footer-bottom .social {
+  margin: 0 25px;
+}
+footer .footer-bottom .social i {
+  background-color: #d5625f;
 }

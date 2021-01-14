@@ -1,14 +1,14 @@
 footer{
   .footer-top{
     background: $mainColor2;
-    padding: 70px 90px;
+    padding: 70px $horizontalPadding;
     display: flex;
-    justify-content: space-around;
-    color: #99998D;
+    justify-content: space-between;
+    color: $lightgreyColor;
     line-height: 30px;
     .width{
       width: calc(100% / 4 - 40px);
-      margin: 20px;
+      margin: $horizontalMargin;
     }
     h4{
       color: #647178;
@@ -19,6 +19,10 @@ footer{
       padding-bottom: 10px;
       border-bottom: 1px solid rgba(153, 153, 141, 0.3);
       @include transition(color, 0.4s);
+      i{
+        font-size: 14px;
+        margin-right: 5px;
+      }
       &:hover{
         color: $hoverColor;
         cursor: pointer;
@@ -39,8 +43,23 @@ footer{
 
   }
   .footer-bottom{
-    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px $horizontalPadding;
     background: $footerBottomColor;
+    color: $lightgreyColor;
+    font-size: 14px;
+    .copyright{
+      margin: 0 $horizontalMargin;
+    }
+    .social{
+      margin: 0 $horizontalMargin;
+      i{
+        background-color: $hoverColor;
+      }
+      // vedi file common
+    }
   }
 
 }
