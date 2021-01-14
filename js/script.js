@@ -4,6 +4,9 @@ var app = new Vue(
     data: {
       view: false,
       bottom: '-3.1%',
+      scrollPosition: '',
+      scrollHeight: '',
+      scrollGreaterHeight: '',
       headerNav: [
         {
           name: 'HOME',
@@ -129,13 +132,34 @@ var app = new Vue(
     methods: {
       viewTrainers: function(){
         if(this.view == false){
+
+          this.scrollPosition = document.getElementsByClassName('trainers-container');
+          this.scrollHeight = this.scrollPosition[0].offsetHeight;
+
           this.view = true;
-          this.bottom = '-2%';
+
+          setTimeout(() => {
+            this.scrollGreaterHeight = this.scrollPosition[0].offsetHeight;
+            console.log(this.scrollHeight, this.scrollGreaterHeight);
+            this.bottom = '-2%';
+            window.scrollTo({
+              top: this.scrollPosition[0].offsetTop + this.scrollGreaterHeight - 260,
+              behavior: 'smooth'
+            });
+          },0)
+
         } else{
+
           this.view = false;
           setTimeout(() => {
             this.bottom = '-3.1%';
+
           }, 525)
+
+          window.scrollTo({
+            top: this.scrollPosition[0].offsetTop + this.scrollHeight,
+            behavior: 'smooth'
+          });
         }
 
         console.log(this.view);
