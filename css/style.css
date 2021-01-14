@@ -501,15 +501,46 @@ main .news .col {
   width: calc(100% / 3 - 50px);
 }
 main .news .article {
-  align-self: flex-start;
   background: #1E2123;
   text-align: left;
 }
 main .news .article:nth-child(2) {
   margin: 50px 0;
 }
-main .news .article img {
+main .news .article .img {
+  position: relative;
+}
+main .news .article .img img {
+  display: block;
+  height: 100%;
   width: 100%;
+}
+main .news .article .img .layover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s;
+}
+main .news .article .img .layover i {
+  font-size: 25px;
+  color: white;
+  margin: 0 5px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+main .news .article .img:hover {
+  cursor: pointer;
+}
+main .news .article .img:hover .layover {
+  background-color: rgba(213, 98, 95, 0.8);
+}
+main .news .article .img:hover i {
+  opacity: 1;
 }
 main .news .article .article-text {
   padding: 25px 25px;
