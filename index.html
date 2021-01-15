@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- google.fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <!-- animate.css -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- aos.css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
+    <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title></title>
   </head>
@@ -18,7 +25,7 @@
       <div class="charger" v-if="!visible">
         <i class="fas fa-circle-notch"></i>
       </div>
-      
+
       <!-- header -->
       <header v-if="visible" :style="{backgroundImage: 'url(' + currentBackground + ')' }">
         <div class="header-top">
@@ -32,7 +39,6 @@
                   {{element.name}}
                 </a>
               </li>
-
             </ul>
           </nav>
         </div>
@@ -59,10 +65,10 @@
 
         <!-- signup -->
         <section class="signup">
-          <div class="fit-image">
+          <div data-aos="fade-right" class="fit-image">
             <img src="img/home_img-compressor.jpg" alt="">
           </div>
-          <div class="signup-form">
+          <div data-aos="fade-left" class="signup-form">
             <h3>Sign Up For A Free Training Session!</h3>
             <form class="" action="index.html" method="post">
               <label for="name">Name</label>
@@ -71,7 +77,6 @@
               <input class="input" type="email" name="email" value="">
               <input class="input-button" type="submit" name="" value="START NOW">
             </form>
-
           </div>
         </section>
         <!-- /signup -->
@@ -102,7 +107,6 @@
             <img src="img/divider-x-red.png" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, nostrum.</p>
           </div>
-
         </section>
         <!-- /what-we-do -->
 
@@ -110,7 +114,7 @@
         <section class="results">
           <h2>REAL WORLD RESULTS</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
-          <div class="flex-container">
+          <div data-aos="zoom-in" class="flex-container">
             <div v-for="element in results" class="results-item">
               <img :src="element.image" alt="">
               <div class="results-text">
@@ -126,7 +130,7 @@
         <section class="facilities">
           <h2>HIGH PERFORMANCE FACILITIES</h2>
           <img class="divider" src="img/divider-xx-red.png" alt="">
-          <div class="flex-container">
+          <div data-aos="fade-up" class="flex-container">
             <img src="img/home-image1.jpg" alt="">
             <img src="img/home-image2.jpg" alt="">
             <img src="img/home-image3.jpg" alt="">
@@ -150,7 +154,7 @@
           <img class="divider" src="img/divider-xx-red.png" alt="">
           <!-- trainers visibili -->
           <div class="flex-container">
-            <div v-for="trainer in trainers" class="trainers">
+            <div data-aos="flip-left" data-aos-duration="800" v-for="trainer in trainers" class="trainers">
               <img :src="trainer.photo" alt="">
               <div class="info">
                 <h4>{{trainer.name}}</h4>
@@ -202,7 +206,7 @@
 
           <div class="float-element">
             <!-- prima colonna -->
-            <div class="col">
+            <div data-aos="zoom-in-right" data-aos-duration="800" class="col">
               <div class="article">
                 <div class="img">
                   <img :src="post[0].image" alt="">
@@ -234,7 +238,7 @@
             <!-- /prima colonna -->
 
             <!-- seconda colonna -->
-            <div class="col">
+            <div data-aos="zoom-in" data-aos-duration="800" class="col">
               <div class="article">
                 <div class="img">
                   <img :src="post[2].image" alt="">
@@ -266,7 +270,7 @@
             <!-- /seconda colonna -->
 
             <!-- terza colonna -->
-            <div class="col">
+            <div data-aos="zoom-in-left" data-aos-duration="800" class="col">
               <div class="article">
                 <div class="img">
                   <img :src="post[4].image" alt="">
@@ -387,9 +391,16 @@
         </div>
       </footer>
       <!-- /footer -->
-
     </div>
 
+    <!-- inizializzazione AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+    <!-- /inizializzazione AOS -->
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>

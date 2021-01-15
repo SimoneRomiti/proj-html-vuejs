@@ -167,7 +167,7 @@ header .header-bottom p {
 }
 header .header-bottom a {
   display: inline-block;
-  border: 2px solid #6b6b6b;
+  border: 3px solid #6b6b6b;
   color: #6b6b6b;
   background: transparent;
   padding: 15px 30px;
@@ -176,7 +176,7 @@ header .header-bottom a {
   transition: all 0.3s;
 }
 header .header-bottom a:hover {
-  border: 2px solid #fefefe;
+  border: 3px solid #fefefe;
   color: #fefefe;
   cursor: pointer;
 }
@@ -220,10 +220,13 @@ main .signup {
   padding: 140px 90px;
 }
 main .signup .fit-image {
+  height: 350px;
   width: 40%;
+  display: flex;
+  align-items: center;
 }
 main .signup img {
-  height: 300px;
+  width: 100%;
   transition: transform 0.5s;
 }
 main .signup img:hover {
@@ -281,12 +284,16 @@ main .what-we-do {
   align-items: center;
 }
 main .what-we-do .item {
-  width: 20%;
+  width: calc(100% / 4 - 50px);
+  margin: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: white;
+  font-size: 18px;
+}
+main .what-we-do .item h4 {
+  font-size: 19px;
 }
 main .what-we-do .item i {
   text-align: center;
@@ -450,27 +457,10 @@ main .trainers-container .trainers p {
   color: #AEAFAE;
   line-height: 30px;
 }
-main .trainers-container .hidden-trainers {
-  padding: 140px 90px;
-  background: #25292B;
-}
-main .trainers-container .hidden-trainers h2 {
-  color: white;
-  font-size: 35px;
-}
-main .trainers-container .hidden-trainers .divider {
-  margin: 30px 0;
-}
-main .trainers-container .hidden-trainers .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
-}
 main .trainers-container .view {
   margin-top: 70px;
   display: inline-block;
-  border: 2px solid #6b6b6b;
+  border: 3px solid #6b6b6b;
   color: #6b6b6b;
   background: transparent;
   padding: 15px 30px;
@@ -479,7 +469,7 @@ main .trainers-container .view {
   transition: all 0.3s;
 }
 main .trainers-container .view:hover {
-  border: 2px solid #fefefe;
+  border: 3px solid #fefefe;
   color: #fefefe;
   cursor: pointer;
 }
@@ -575,7 +565,7 @@ main .news .article p {
 }
 main .news .button {
   display: inline-block;
-  border: 2px solid #6b6b6b;
+  border: 3px solid #6b6b6b;
   color: #6b6b6b;
   background: transparent;
   padding: 15px 30px;
@@ -584,7 +574,7 @@ main .news .button {
   transition: all 0.3s;
 }
 main .news .button:hover {
-  border: 2px solid #fefefe;
+  border: 3px solid #fefefe;
   color: #fefefe;
   cursor: pointer;
 }
@@ -614,7 +604,7 @@ main .goals p {
 }
 main .goals .button {
   display: inline-block;
-  border: 2px solid #6b6b6b;
+  border: 3px solid #6b6b6b;
   color: #6b6b6b;
   background: transparent;
   padding: 15px 30px;
@@ -626,7 +616,7 @@ main .goals .button {
   margin: 25px;
 }
 main .goals .button:hover {
-  border: 2px solid #fefefe;
+  border: 3px solid #fefefe;
   color: #fefefe;
   cursor: pointer;
 }

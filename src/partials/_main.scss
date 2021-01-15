@@ -40,10 +40,13 @@ main{
     justify-content: space-around;
     padding: $verticalPadding $horizontalPadding;
     .fit-image{
+      height: 350px;
       width: 40%;
+      display: flex;
+      align-items: center;
     }
     img{
-      height: 300px;
+      width: 100%;
       @include transition(transform, 0.5s);
       &:hover{
         @include zoomEffect(1.1);
@@ -87,12 +90,16 @@ main{
     justify-content: space-around;
     align-items: center;
     .item{
-      width: 20%;
+      width: calc(100% / 4 - 50px);
+      margin: 0 25px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       color: white;
+      font-size: 18px;
+      h4{
+        font-size: 19px;
+      }
       i{
         @include icons;
       }
@@ -215,9 +222,6 @@ main{
         // vedi file common
       }
     }
-    .hidden-trainers{
-      @include results-facilities-trainers-news;
-    }
     .view{
       margin-top: 70px;
       @include button;
@@ -258,22 +262,7 @@ main{
           width: 100%;
         }
         .layover{
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          @include transition(background-color, 0.5s);
-          i{
-            font-size: 25px;
-            color: white;
-            margin: 0 5px;
-            opacity: 0;
-            @include transition(opacity, 0.5s);
-          }
+          @include layover;
         }
         &:hover{
           cursor: pointer;
@@ -337,4 +326,5 @@ main{
       }
     }
   }
+  // fine goals
 }
